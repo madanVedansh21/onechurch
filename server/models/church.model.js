@@ -31,6 +31,17 @@ const churchSchema = new mongoose.Schema(
       required: true,
       minlength: [6, "Password must be at least 6 characters"],
     },
+    bio: {
+      type: String,
+      trim: true,
+      maxlength: [1000, "Bio cannot exceed 1000 characters"],
+      required: false,
+      default: "",
+    },
+    postCount: {
+      type: Number,
+      default: 0,
+    },
     profilePic: {
       type: String,
       default: "",

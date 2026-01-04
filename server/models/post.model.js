@@ -37,6 +37,11 @@ const postSchema = new mongoose.Schema(
       required: true,
       index: true,
     },
+    thumbnail: {
+      type: String,
+      default: null,
+      required: false,
+    },
     likes: [
       {
         liker: {
