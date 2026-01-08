@@ -1,6 +1,6 @@
 // todo -> logi  for church , signup  and generate access and refresh token for church verufyJWT is common for both the userschema and churchschema
-import { ChurchModel } from "../models/church.model.js";
-import { PostModel } from "../models/post.model.js";
+import ChurchModel from "../models/church.model.js";
+import PostModel from "../models/post.model.js";
 
 export const generateAccessAndRefereshTokens = async (churchId) => {
   try {
