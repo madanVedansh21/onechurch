@@ -33,9 +33,15 @@ const postSchema = new mongoose.Schema(
     }, // for efficient filtering on feed
     postedBy: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Church",
       required: true,
+      refPath: "posterModel",
       index: true,
+    },
+    posterModel: {
+      type: String,
+      required: true,
+      enum: ["User", "Church"],
+      default: "Church",
     },
     thumbnail: {
       type: String,
